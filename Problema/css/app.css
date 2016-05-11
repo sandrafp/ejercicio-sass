@@ -1,58 +1,68 @@
-/*
-Error: Base-level rules cannot contain the parent-selector-referencing character '&'.
-        on line 74 of css/main.scss
+.navbar {
+  margin-bottom: 0px; }
+  .navbar li {
+    margin-top: 5%; }
 
-69: 
-70: }
-71: .bg-img-sec img {
-72: 	width: 100%;
-73: }
-74: &.btn-primary {
-75: 	background-color: transparent;
-76: 	color:$btn-bg;
-77: 	border-color: $btn-bg;
-78: 	&:hover {
-79: 		background-color: white;
+.bg-image {
+  background-image: url("../images/1920x665-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  color: #dcdcdc;
+  position: relative;
+  padding: 0%; }
+  .bg-image .contenido {
+    padding-top: 5%; }
+    .bg-image .contenido p {
+      padding-bottom: 3%; }
+    .bg-image .contenido .btn {
+      background-color: #3cb1f7;
+      color: #dcdcdc;
+      padding: 10px 20px;
+      border-radius: 25px; }
+      .bg-image .contenido .btn:hover {
+        background-color: transparent;
+        border-color: #3cb1f7; }
+      .bg-image .contenido .btn.btn-primary {
+        background-color: transparent;
+        color: #3cb1f7;
+        border-color: #3cb1f7; }
+        .bg-image .contenido .btn.btn-primary:hover {
+          background-color: white; }
+    .bg-image .contenido ul li {
+      list-style: none;
+      display: inline-block;
+      font-size: 25px;
+      margin-left: 5%; }
+      .bg-image .contenido ul li a {
+        color: #dcdcdc;
+        text-decoration: none; }
+        .bg-image .contenido ul li a .fa {
+          padding-right: 10px; }
 
-Backtrace:
-css/main.scss:74
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/selector/comma_sequence.rb:29:in `resolve_parent_refs'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/ruby/lib/ruby/gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Base-level rules cannot contain the parent-selector-referencing character '&'.\A         on line 74 of css/main.scss\A \A 69: \A 70: }\A 71: .bg-img-sec img {\A 72: 	width: 100%;\A 73: }\A 74: &.btn-primary {\A 75: 	background-color: transparent;\A 76: 	color:$btn-bg;\A 77: 	border-color: $btn-bg;\A 78: 	&:hover {\A 79: 		background-color: white;"; }
+.bg-image::before {
+  background-color: rgba(0, 0, 0, 0.47);
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 400px; }
+
+.mg-t {
+  margin-top: 5%; }
+
+.bg-img-sec img {
+  width: 100%; }
+
+footer .fa {
+  border-radius: 50%;
+  width: 68px;
+  line-height: 68px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #1c7a44;
+  text-align: center; }
+
+/*# sourceMappingURL=app.css.map */
